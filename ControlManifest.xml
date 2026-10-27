@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+  <control namespace="DynaTech" constructor="CustomKanbanControl" version="1.6.0" display-name-key="CustomKanbanControl" description-key="A clean, professional Kanban board for any view. Group records by a choice column, drag cards between columns, see per-column totals." control-type="standard" api-version="1.3.18">
+    <external-service-usage enabled="false"/>
+    <data-set name="records" display-name-key="Records" description-key="The view records shown as cards">
+      <property-set name="title" display-name-key="Card Title" description-key="Column used as the card title" of-type="SingleLine.Text" usage="bound" required="true"/>
+      <property-set name="groupBy" display-name-key="Group By (Choice column)" description-key="Choice/OptionSet column that defines the Kanban columns" of-type="OptionSet" usage="bound" required="true"/>
+      <property-set name="cardValue" display-name-key="Card Value (Currency)" description-key="Currency column shown on the card and summed per column" of-type="Currency" usage="bound" required="false"/>
+      <property-set name="cardValueBase" display-name-key="Card Value (Base Currency)" description-key="Optional. The matching (Base) column of Card Value, e.g. Est. Revenue (Base). Used for the column totals so multi-currency records can be added up. Left empty, the control finds it automatically." of-type="Currency" usage="bound" required="false"/>
+      <property-set name="cardDate" display-name-key="Card Date" description-key="Date column shown on the card (highlighted red when overdue)" of-type="DateAndTime.DateOnly" usage="bound" required="false"/>
+      <property-set name="extraField1" display-name-key="Extra field 1" description-key="Pick any column to show as a row on the card" of-type-group="anyColumn" usage="bound" required="false"/>
+      <property-set name="extraField2" display-name-key="Extra field 2" description-key="Pick any column to show as a row on the card" of-type-group="anyColumn" usage="bound" required="false"/>
+      <property-set name="extraField3" display-name-key="Extra field 3" description-key="Pick any column to show as a row on the card" of-type-group="anyColumn" usage="bound" required="false"/>
+      <property-set name="extraField4" display-name-key="Extra field 4" description-key="Pick any column to show as a row on the card" of-type-group="anyColumn" usage="bound" required="false"/>
+      <property-set name="extraField5" display-name-key="Extra field 5" description-key="Pick any column to show as a row on the card" of-type-group="anyColumn" usage="bound" required="false"/>
+      <property-set name="extraField6" display-name-key="Extra field 6" description-key="Pick any column to show as a row on the card" of-type-group="anyColumn" usage="bound" required="false"/>
+    </data-set>
+    <type-group name="anyColumn">
+      <type>SingleLine.Text</type>
+      <type>SingleLine.Email</type>
+      <type>SingleLine.Phone</type>
+      <type>SingleLine.URL</type>
+      <type>SingleLine.TextArea</type>
+      <type>Multiple</type>
+      <type>Currency</type>
+      <type>Decimal</type>
+      <type>FP</type>
+      <type>Whole.None</type>
+      <type>DateAndTime.DateOnly</type>
+      <type>DateAndTime.DateAndTime</type>
+      <type>OptionSet</type>
+      <type>TwoOptions</type>
+      <type>Lookup.Simple</type>
+    </type-group>
+    <property name="ownerColumn" display-name-key="Owner column logical name" description-key="Logical name of the owner/lookup column to show as an avatar. The column must be included in the view. Default: ownerid" of-type="SingleLine.Text" usage="input" required="false" default-value="ownerid"/>
+    <property name="validateBpf" display-name-key="Check BPF required fields" description-key="Yes = a card cannot leave a stage while that Business Process Flow stage has empty required fields. Only applies when the table has an activated BPF whose stage names match the column labels." of-type="Enum" usage="input" required="false" default-value="yes">
+      <value name="yes" display-name-key="Yes">yes</value>
+      <value name="no" display-name-key="No">no</value>
+    </property>
+    <property name="boardHeight" display-name-key="Board height (px)" description-key="Fixed height of the board in pixels. Default: 720" of-type="Whole.None" usage="input" required="false" default-value="720"/>
+    <resources>
+      <code path="bundle.js" order="1"/>
+      <css path="css/kanban.css" order="1"/>
+    </resources>
+    <feature-usage>
+      <uses-feature name="WebAPI" required="true"/>
+      <uses-feature name="Utility" required="true"/>
+    </feature-usage>
+    <built-by name="pac" version="1.48.2"/>
+  </control>
+</manifest>

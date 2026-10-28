@@ -1,0 +1,20 @@
+2026-10-06 14:04:40.931 - Info	
+Packing C:\CustomKanbanControl_Generic\CustomKanbanControl_Generic\CustomKanbanControl\obj\Debug\Metadata to bin\Debug\CustomKanbanControl.zip
+
+2026-10-06 14:04:40.968 - Info	Processing Component: Entities
+2026-10-06 14:04:40.973 - Info	Processing Component: Roles
+2026-10-06 14:04:40.978 - Info	Processing Component: Workflows
+2026-10-06 14:04:40.979 - Info	Processing Component: FieldSecurityProfiles
+2026-10-06 14:04:40.980 - Info	Processing Component: Templates
+2026-10-06 14:04:40.981 - Info	Processing Component: EntityMaps
+2026-10-06 14:04:40.981 - Info	Processing Component: EntityRelationships
+2026-10-06 14:04:40.991 - Info	Processing Component: OrganizationSettings
+2026-10-06 14:04:40.992 - Info	Processing Component: optionsets
+2026-10-06 14:04:40.992 - Info	Processing Component: CustomControls
+2026-10-06 14:04:41.010 - Info	 - DynaTech.CustomKanbanControl
+2026-10-06 14:04:41.032 - Info	Processing Component: SolutionPluginAssemblies
+2026-10-06 14:04:41.033 - Info	Processing Component: EntityDataProviders
+2026-10-06 14:04:41.037 - Info	Processing Sharded Component Files
+2026-10-06 14:04:41.106 - Info	
+Unmanaged Pack complete.
+

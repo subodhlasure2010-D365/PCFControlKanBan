@@ -1,0 +1,2 @@
+C:\CustomKanbanControl_Generic\CustomKanbanControl_Generic\CustomKanbanControl\obj\Debug\CustomKanbanControl.cdsproj.AssemblyReference.cache
+C:\CustomKanbanControl_Generic\CustomKanbanControl_Generic\CustomKanbanControl\obj\Debug\CustomKanbanControl.cdsproj.CoreCompileInputs.cache
